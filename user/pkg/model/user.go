@@ -1,6 +1,6 @@
 package model
 
-import "gitee.com/zince/micro-service/common/pkg/db"
+import "github.com/Zinces/micro-service/common/pkg/db"
 
 type User struct {
 	db.BaseModel

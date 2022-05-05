@@ -5,7 +5,7 @@ import (
 	"gorm.io/gorm"
 	"strconv"
 	"time"
-	"gitee.com/zince/micro-service/common/pkg/config"
+	"github.com/Zinces/micro-service/common/pkg/config"
 	"fmt"
 )
 

@@ -5,7 +5,7 @@ import (
 
 	log "github.com/micro/go-micro/v2/logger"
 
-	user "gitee.com/zince/micro-service/user/proto/user"
+	"github.com/Zinces/micro-service/user/proto/user"
 )
 
 type User struct{}

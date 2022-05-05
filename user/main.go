@@ -1,19 +1,15 @@
 package main
 
 import (
-	db2 "gitee.com/zince/micro-service/common/pkg/db"
-	"gitee.com/zince/micro-service/user/pkg/model"
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2"
-	"gitee.com/zince/micro-service/user/handler"
-	"gitee.com/zince/micro-service/user/subscriber"
+	"github.com/Zinces/micro-service/user/handler"
+	"github.com/Zinces/micro-service/user/subscriber"
 
-	"gitee.com/zince/micro-service/user/proto/user"
+	"github.com/Zinces/micro-service/user/proto/user"
 )
 
 func main() {
-	db := db2.GetDB()
-	db.AutoMigrate(&model.User{})
 
 	// New Service
 	service := micro.NewService(

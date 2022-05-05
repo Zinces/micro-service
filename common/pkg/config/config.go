@@ -3,7 +3,7 @@ package config
 import (
 	"os"
 	"sync"
-	"gitee.com/zince/micro-service/common/pkg/types"
+	"github.com/Zinces/micro-service/common/pkg/types"
 	"time"
 )
 
