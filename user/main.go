@@ -1,6 +1,8 @@
 package main
 
 import (
+	"github.com/Zinces/micro-service/common/pkg/db"
+	"github.com/Zinces/micro-service/user/pkg/model"
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2"
 	"github.com/Zinces/micro-service/user/handler"
@@ -10,7 +12,8 @@ import (
 )
 
 func main() {
-
+	db := db.GetDB()
+	db.AutoMigrate(&model.User{})
 	// New Service
 	service := micro.NewService(
 		micro.Name("micro.service.user"),
