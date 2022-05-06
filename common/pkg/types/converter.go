@@ -13,7 +13,7 @@ func UInt64ToString(num uint64) string  {
 	return strconv.FormatUint(num, 10)
 }
 
-func gStringToInt(str string) (int, error)  {
+func StringToInt(str string) (int, error)  {
 	return strconv.Atoi(str)
 }
 

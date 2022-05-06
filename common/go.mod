@@ -1,6 +1,6 @@
 module github.com/Zinces/micro-service/common
 
-go 1.17
+go 1.14
 
 require (
 	gorm.io/driver/mysql v1.3.3

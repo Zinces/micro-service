@@ -1,6 +1,6 @@
 module github.com/Zinces/micro-service/user
 
-go 1.17
+go 1.14
 
 require (
 	github.com/Zinces/micro-service/common v0.0.0-20220505120608-3e650efea099
