@@ -87,6 +87,22 @@ services:
     networks:
       - micro-network
 
+  micro-user-db:
+    image: mysql:${MYSQL_VERSION}
+    ports:
+      - ${USER_DB_PORT}:3306
+    volumes:
+      - ./data/user-db:/var/lib/mysql
+    restart: always
+    environment:
+      TZ: ${TZ}
+      MYSQL_USER: ${USER_DB_USER} # 设置用户名
+      MYSQL_PASSWORD: ${USER_DB_PASSWORD} # 设置用户民吗
+      MYSQL_DATABASE: ${USER_DB_DATABASE} # 初始数据库
+      MYSQL_ROOT_PASSWORD: ${USER_DB_ROOT_PASSWORD} # root用户密码
+    networks:
+      - micro-network
+
   micro-user-service:
     depends_on: # 启动依赖，需要等etcd集群启动后才启动当前容器
       - etcd1
@@ -107,26 +123,11 @@ services:
       DB_CONNECTIONS_MAX_LIFE_TIME: ${USER_DB_CONNECTIONS_MAX_LIFE_TIME}
     ports:
       - 9092:9091
-    volumes:
-      - ./user:/app
+
     networks:
       - micro-network
 
-  micro-user-db:
-    image: mysql:${MYSQL_VERSION}
-    ports:
-      - ${USER_DB_PORT}:3306
-    volumes:
-      - ./data/user-db:/var/lib/mysql
-    restart: always
-    environment:
-      TZ: ${TZ}
-      MYSQL_USER: ${USER_DB_USER} # 设置用户名
-      MYSQL_PASSWORD: ${USER_DB_PASSWORD} # 设置用户民吗
-      MYSQL_DATABASE: ${USER_DB_DATABASE} # 初始数据库
-      MYSQL_ROOT_PASSWORD: ${USER_DB_ROOT_PASSWORD} # root用户密码
-    networks:
-      - micro-network
+
 
 
 networks:

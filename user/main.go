@@ -12,8 +12,8 @@ import (
 )
 
 func main() {
-	db := db.GetDB()
-	db.AutoMigrate(&model.User{})
+	dbM := db.GetDB()
+	dbM.AutoMigrate(&model.User{})
 	// New Service
 	service := micro.NewService(
 		micro.Name("micro.service.user"),

@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-var once *sync.Once
+var once sync.Once
 
 type Db struct {
 	Address               string `json:"address"`
@@ -41,7 +41,7 @@ func LoadConfig() *Configuration  {
 			Database:              database,
 			User:                  user,
 			Password:              password,
-			Charset:               "utf8",
+			Charset:               "utf8mb4",
 			MaxConnections:        dbMaxConnections,
 			MaxIdeConnections:     dbMaxIdeConnections,
 			ConnectionMaxLifeTime: time.Duration(dbConnectionMaxLifeTime) * time.Minute,

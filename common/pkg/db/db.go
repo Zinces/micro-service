@@ -1,12 +1,12 @@
 package db
 
 import (
+	"fmt"
+	"github.com/Zinces/micro-service/common/pkg/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"strconv"
 	"time"
-	"github.com/Zinces/micro-service/common/pkg/config"
-	"fmt"
 )
 
 var dbConfig *config.Db
@@ -38,6 +38,11 @@ func connectDB() (*gorm.DB, error)  {
 		"%s:%s@(%s)/%s?charset=%s&parseTime=True&loc=Local",
 		dbConfig.User, dbConfig.Password, dbConfig.Address, dbConfig.Database, dbConfig.Charset,
 	)), &gorm.Config{})
+
+	//gormDb, err := gorm.Open(mysql.Open(fmt.Sprintf(
+	//	"%s:%s@(%s)/%s?charset=%s&parseTime=True&loc=Local",
+	//	"root","root","127.0.0.1:3306","micro_user","utf8mb4",
+	//)), &gorm.Config{})
 
 	if err != nil {
 		return nil,err

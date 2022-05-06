@@ -34,8 +34,8 @@ github.com/Microsoft/hcsshim v0.8.7-0.20191101173118-65519b62243c/go.mod h1:7xhj
 github.com/OpenDNS/vegadns2client v0.0.0-20180418235048-a3fa4a771d87/go.mod h1:iGLljf5n9GjT6kc0HBvyI1nOKnGQbNB66VzSNbK5iks=
 github.com/Shopify/sarama v1.19.0/go.mod h1:FVkBWblsNy7DGZRfXLU0O9RCGt5g3g3yEuWXgklEdEo=
 github.com/Shopify/toxiproxy v2.1.4+incompatible/go.mod h1:OXgGpZ6Cli1/URJOF1DMxUHB2q5Ap20/P/eIdh4G0pI=
-github.com/Zinces/micro-service/common v0.0.0-20220505120608-3e650efea099 h1:ZVxU9qFn+KnCHt6dDnCOKOJnPeD+UDNHv6bYWmDKmAY=
-github.com/Zinces/micro-service/common v0.0.0-20220505120608-3e650efea099/go.mod h1:23u1JW80S8u32T7eCeq2WcChjHt6NTmFCfMlHAA3Nko=
+github.com/Zinces/micro-service/common v0.0.0-20220506015701-ebd8e5e5e53e h1:DdY+3hr0Dqkw6P+K1jDJU3wyHYbDqnus8qtFDYc1JBg=
+github.com/Zinces/micro-service/common v0.0.0-20220506015701-ebd8e5e5e53e/go.mod h1:I7dLt7MvjA+kQXDZFbJTuzPbGREDiSuDJ62b4CJ7xSI=
 github.com/akamai/AkamaiOPEN-edgegrid-golang v0.9.0/go.mod h1:zpDJeKyp9ScW4NNrbdr+Eyxvry3ilGPewKoXw3XGN1k=
 github.com/alangpierce/go-forceexport v0.0.0-20160317203124-8f1d6941cd75/go.mod h1:uAXEEpARkRhCZfEvy/y0Jcc888f9tHCc1W7/UeEtreE=
 github.com/alcortesm/tgz v0.0.0-20161220082320-9c5fe88206d7 h1:uSoVVbwJiQipAclBbw+8quDsfcvFjOpI5iCf4p/cqCs=
